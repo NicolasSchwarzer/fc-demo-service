@@ -1,0 +1,14 @@
+{
+  "version": "independent",
+  "npmClient": "npm",
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "ignored-file"
+      ]
+    }
+  },
+  "packages": [
+    "packages/*"
+  ]
+}

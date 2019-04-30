@@ -1,0 +1,25 @@
+{
+  "name": "shell",
+  "private": true,
+  "description": "Aliyun function compute shell function.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NicolasSchwarzer/fc-demo-service/tree/master/packages/shell"
+  },
+  "keywords": [
+    "serverless",
+    "aliyun",
+    "function-compute",
+    "faas",
+    "nodejs",
+    "shell"
+  ],
+  "author": "Nicolas Wan <nbwansjtu@gmail.com> (https://github.com/NicolasSchwarzer)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NicolasSchwarzer/fc-demo-service/issues"
+  },
+  "homepage": "https://github.com/NicolasSchwarzer/fc-demo-service/tree/master/packages/shell#readme"
+}

@@ -1,0 +1,60 @@
+{
+  "name": "fc-demo-service",
+  "private": true,
+  "description": "Aliyun function compute demo service.",
+  "scripts": {
+    "start": "cd packages && fcli shell",
+    "bootstrap": "lerna clean --yes && lerna bootstrap",
+    "lint": "npm run lint:es && npm run lint:md",
+    "lint:es": "eslint . --ext .js",
+    "lint:md": "eslint . --ext .md",
+    "lint-fix": "npm run lint-fix:es && npm run lint-fix:md",
+    "lint-fix:es": "eslint . --ext .js --fix",
+    "lint-fix:md": "eslint . --ext .md --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasSchwarzer/fc-demo-service.git"
+  },
+  "keywords": [
+    "serverless",
+    "aliyun",
+    "function-compute",
+    "faas",
+    "nodejs",
+    "shell",
+    "lerna"
+  ],
+  "author": "Nicolas Wan <nbwansjtu@gmail.com> (https://github.com/NicolasSchwarzer)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NicolasSchwarzer/fc-demo-service/issues"
+  },
+  "homepage": "https://github.com/NicolasSchwarzer/fc-demo-service#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^7.5.2",
+    "@commitlint/config-conventional": "^7.5.0",
+    "eslint": "^5.16.0",
+    "eslint-config-egg": "^7.3.1",
+    "eslint-plugin-markdown": "^1.0.0",
+    "husky": "^2.1.0",
+    "lerna": "^3.13.4",
+    "lint-staged": "^8.1.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint-fix:es",
+      "git add"
+    ],
+    "*.md": [
+      "npm run lint-fix:md",
+      "git add"
+    ]
+  }
+}
