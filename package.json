@@ -8,6 +8,7 @@
     "dev:hello-world": "fun local invoke hello-world -e event.json",
     "dev:shell": "fun local invoke shell -e event.json",
     "dev:time": "fun local invoke time -e event.json",
+    "release": "fun deploy",
     "bootstrap": "lerna clean --yes && lerna bootstrap",
     "lint": "npm run lint:es && npm run lint:md",
     "lint:es": "eslint . --ext .js",
