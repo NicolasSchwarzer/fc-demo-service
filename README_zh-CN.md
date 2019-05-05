@@ -101,4 +101,16 @@ $ npm run release
 **Web IDE 暂时不支持本地开发调试，建议用来做线上函数执行测试，需要 fcli 或者 fun 提前配置好配置数据**
 
 - [Web IDE 访问地址](https://ide.fc.aliyun.com/cn-hangzhou)
-- [Web IDE 教程](https://help.aliyun.com/document_detail/99243.html)
+- [Web IDE 安装使用教程](https://help.aliyun.com/document_detail/99243.html)
+
+### 启动 IDE 本机服务
+
+```shell
+$ ide start
+```
+
+### 停止 IDE 本机服务
+
+```shell
+$ ide stop
+```

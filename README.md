@@ -103,4 +103,16 @@ $ npm run release
 **Web ide does not support local running yet. We suggest use it to run on-line functions. Also config by fcli or fun is required.**
 
 - [Click here to access web ide](https://ide.fc.aliyun.com/cn-hangzhou)
-- [Hot to use web ide](https://help.aliyun.com/document_detail/99243.html)
+- [How to install and use web ide](https://help.aliyun.com/document_detail/99243.html)
+
+### Start local host for IDE
+
+```shell
+$ ide start
+```
+
+### Stop local host
+
+```shell
+$ ide stop
+```
