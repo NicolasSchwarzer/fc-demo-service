@@ -1,0 +1,38 @@
+ROSTemplateFormatVersion: '2015-09-01'
+Transform: 'Aliyun::Serverless-2018-04-03'
+Resources:
+  demo:
+    Type: 'Aliyun::Serverless::Service'
+    Properties:
+      Description: '函数计算 Demo 服务 - 杭州 Region'
+      InternetAccess: true
+    hello-world:
+      Type: 'Aliyun::Serverless::Function'
+      Properties:
+        Handler: 'index.handler'
+        Runtime: 'nodejs8'
+        CodeUri: 'packages/hello-world'
+        Description: 'Hello World 函数'
+        MemorySize: 128
+        Timeout: 3
+        InitializationTimeout: 3
+    shell:
+      Type: 'Aliyun::Serverless::Function'
+      Properties:
+        Handler: 'index.handler'
+        Runtime: 'nodejs8'
+        CodeUri: 'packages/shell'
+        Description: 'Shell 函数，输出 shell 脚本的日志'
+        MemorySize: 128
+        Timeout: 3
+        InitializationTimeout: 3
+    time:
+      Type: 'Aliyun::Serverless::Function'
+      Properties:
+        Handler: 'index.handler'
+        Runtime: 'nodejs8'
+        CodeUri: 'packages/time'
+        Description: 'Time 函数，获取函数执行时间'
+        MemorySize: 128
+        Timeout: 3
+        InitializationTimeout: 3
