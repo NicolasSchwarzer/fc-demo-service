@@ -6,6 +6,16 @@ Resources:
     Properties:
       Description: '函数计算 Demo 服务 - 杭州 Region'
       InternetAccess: true
+    build:
+      Type: 'Aliyun::Serverless::Function'
+      Properties:
+        Handler: 'index.handler'
+        Runtime: 'nodejs8'
+        CodeUri: 'packages/build'
+        Description: '打包服务 Demo 函数'
+        MemorySize: 3072
+        Timeout: 180
+        InitializationTimeout: 3
     hello-world:
       Type: 'Aliyun::Serverless::Function'
       Properties:
